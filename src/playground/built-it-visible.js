@@ -1,25 +1,57 @@
-const appRoot = document.getElementById('app');
+class VisibilityApp extends React.Component {
+    constructor(props) {
+        super(props);
 
-let textHidden = true;
+        this.state = {
+            visibility: false
+        }
 
-const renderText = () => {
-    textHidden = !textHidden
-    renderApp();
+        this.buttonHandler = this.buttonHandler.bind(this);
+    }
+
+    buttonHandler() {
+        this.setState((prevState) => {
+            return {
+                visibility: !prevState.visibility
+            }
+        })
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>Visibility App</h1>
+                <button onClick={this.buttonHandler}>{this.state.visibility ? "Hide Details" : "Show Details"}</button>
+                <p>{this.state.visibility && "This is some hidden text."}</p> 
+            </div>
+        )
+    }
 }
 
-const renderApp = () => {
-    const template = (
-        <div>
-            <h1>Visibility Toggle</h1>
-            <button onClick={renderText}>{textHidden ? 'Show details' : 'Hide details'}</button>
+ReactDOM.render(<VisibilityApp />, document.getElementById('app'));
+
+// const appRoot = document.getElementById('app');
+
+// let textHidden = true;
+
+// const renderText = () => {
+//     textHidden = !textHidden
+//     renderApp();
+// }
+
+// const renderApp = () => {
+//     const template = (
+//         <div>
+//             <h1>Visibility Toggle</h1>
+//             <button onClick={renderText}>{textHidden ? 'Show details' : 'Hide details'}</button>
     
-            <p>{textHidden || 'This is some text'}</p>
+//             <p>{textHidden || 'This is some text'}</p>
             
     
-        </div>
-    )
+//         </div>
+//     )
 
-    ReactDOM.render(template, appRoot);
-}
+//     ReactDOM.render(template, appRoot);
+// }
 
-renderApp();
+// renderApp();
