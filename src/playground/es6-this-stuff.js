@@ -50,3 +50,6 @@ check.someEventHandler(); // binds this when called as a method from the global 
 // but when set as the onClick method, something happens in the background JS that I don't
 // understand which makes it so that the context is lost when firing due to the
 // event happening. Avoid this by manually setting onclick=someEventHandler.bind(this);
+
+const broken = check.testFun2();
+broken() // breaks the binding because now we're calling it from the global context.
