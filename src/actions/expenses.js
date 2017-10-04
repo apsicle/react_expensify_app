@@ -1,7 +1,8 @@
 import uuid from 'uuid';
+import moment from 'moment';
 
 // @ACTION GENERATORS
-const addExpense = ({ description='', note='', amount=0, createdAt=0 } = {}) => ({
+const addExpense = ({ description='', note='', amount=0, createdAt=moment() } = {}) => ({
     type: 'ADD_EXPENSE',
     expense: {
         id: uuid(),
