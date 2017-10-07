@@ -5,7 +5,7 @@ const expenses = [{
     description: 'cluck me',
     note: 'Really good',
     amount: 2050,
-    createdAt: moment(0)
+    createdAt: 0
 }, {
     id: '2',
     description: 'Yesterdays meat',

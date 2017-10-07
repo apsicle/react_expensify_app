@@ -43,7 +43,7 @@ test('should return add expense action object with DEFAULT values', () => {
             description: '',
             note: '',
             amount: 0,
-            createdAt: expect.any(moment),
+            createdAt: 0,
             id: expect.any(String)
         }
     });
