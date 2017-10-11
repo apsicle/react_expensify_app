@@ -10,6 +10,8 @@ import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css';
 import 'react-dates/lib/css/_datepicker.css';
 import './styles/styles.scss';
+import './firebase/firebase';
+// import './playground/promises';
 
 const store = configureStore();
 
@@ -17,9 +19,9 @@ const store = configureStore();
 // addExpense -> Gas bill
 // setTextFilter -> bill
 // getVisibleExpenses -> print visibles ones to screen
-store.dispatch(addExpense({ description: 'water bill', amount: 5000, createdAt: -1000, note: 'klappa'}));
-store.dispatch(addExpense({ description: 'alpha bill', amount: 1, createdAt: 1500}));
-store.dispatch(addExpense({ description: 'rent', amount: 40000}))
+// store.dispatch(addExpense({ description: 'water bill', amount: 5000, createdAt: -1000, note: 'klappa'}));
+// store.dispatch(addExpense({ description: 'alpha bill', amount: 1, createdAt: 1500}));
+// store.dispatch(addExpense({ description: 'rent', amount: 40000}))
 
 console.log(getVisibleExpenses(store.getState().expenses, store.getState().filters));
 
