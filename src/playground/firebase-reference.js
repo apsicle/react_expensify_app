@@ -33,6 +33,8 @@ const notes = [{text: 'This is a note', id: '111'}, {text: 'Help me.', id: '112'
 //         console.log(expenses);
 //     });
 
+// the childSnapshot.key is just the string value of the parent ref to the snapshot getting .key
+
 database.ref('expenses')
     .on('child_changed', (snapshot) => {
         console.log(snapshot.key, snapshot.val());
