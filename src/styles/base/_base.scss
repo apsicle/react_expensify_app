@@ -1,11 +1,17 @@
+* {
+    box-sizing: border-box; // when calculating height / width, content-box does not take into account padding + border
+}
+
 html {
     font-size: 62.5%; // an rem is base 16 pixels. setting everything to 62.5% makes
     // rems = to 10 pixels, so its easier to work with.
 }
 
 body {
+    color: $dark-gray;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 1.6rem;
+    font-size: $m-size;
+    line-height: 1.6;
 }
 
 button {

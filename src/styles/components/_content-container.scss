@@ -1,0 +1,5 @@
+.content-container {
+    margin: 0 auto; // evenly distribute rest of space on left and right if > max-width
+    padding: 0 $m-size;
+    max-width: 80vw;
+}
