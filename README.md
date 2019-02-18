@@ -9,3 +9,5 @@ from the dashboard, enter "rent" into the search bar to find only expenses with 
 the date picker, and return only the expenses between the dates of your choosing.
 
 Data is stored privately on Firebase, so log in with your google account to start using!
+
+https://react-course-2-expensifty.herokuapp.com/
